@@ -1,0 +1,115 @@
+        body{
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+            background-color: #DCDCDC;
+        }
+        .cont{
+            position: absolute;
+            width: 340px;
+            height: 460px;
+            box-shadow: 4px 9px #b0b0b0;
+            border-radius: 5px;
+            background-color: #EAECEE;
+            color: red;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 30px 30px;
+        }
+        h1{
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .cont input{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .cont input[type="text"], input[type="password"]{
+            border: none;
+            border-bottom: 1px solid #000;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #000;
+            font-size: 15px;
+        }
+        .cont input[type="password"] span{
+            position: absolute;
+            right: 50px;
+            transform: translate(0,-50%);
+            top: 173px;
+            cursor: pointer;
+        }
+        .fa{
+            position: absolute;
+            right: 40px;
+            transform: translate(0,-50%);
+            top: 159px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #7a797e;
+        }
+        .cont input[type="submit"]{
+            cursor: pointer;
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #3B5998;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        .cont input[type="submit"]:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .cont input[type="submit"]::hover{
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+        .cont a{
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .cont a::hover{
+            color: #ffc107;
+        }
+        .cont hr.hr1{
+            width: 42%;
+            background: black;
+            margin-left: 0;
+            margin-top: 25px;
+            height: 0.50px;
+        }
+        .cont #text
+        {
+            color:black;
+            font-size:15px;
+            font-weight:regular;
+            text-align: center;
+            margin-left: -2px;
+            margin-top: -19px;
+        }
+        .cont hr.hr2{
+            width: 42%;
+            background: black;
+            margin-right: 0;
+            margin-top: -26px;
+            height: 0.50px;
+        }
+
+        @media only screen and (max-width: 600px){
+            .cont{
+                width: 280px;
+                height: 460px;
+            }
+        }

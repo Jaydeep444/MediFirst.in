@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediFirst | Online Medical Store</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="http://127.0.0.1:8000/"><img src="{% static "image/logo.png" %}" class="logo"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="http://127.0.0.1:8000/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/products/">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/register/">Register</a></li>
+                    <li><a href="http://127.0.0.1:8000/login/">Login</a></li>
+                </ul>
+            </nav>
+            <a href="http://127.0.0.1:8000/cart/"><img src="{% static "image/cart.png" %}" width="30px" height="30px"></a>
+            <img src="{% static "image/menu.png" %}" class="menu-icon" onclick="menutoggle()">
+        </div> 
+
+         <div class="row-top">
+
+             <div class="col-2 top">
+                 <h1>Give Your Medication<br>A New Style</h1>
+                 <p>Our online pharmacies can save you as much as 95% <br>on your medication.
+                     We provide you fast, safe and proper service. Join us <br>and be a
+                     member of MediFirst family.</p>
+                 <a href="" class="btn">Explore Now &#8594;</a>
+             </div>
+
+             <div class="msg-container">
+                 <div id="slider">
+                     <div class="msg-col">
+                             <h1>Give Your Medication<br>A New Style</h1>
+                             <p>Our online pharmacies can save you as much as 95% on your<br> medication.
+                                 We provide you fast, safe and proper service.<br> Join us and be a
+                                 member of MediFirst family.</p>
+                             <a href="" class="btn">Explore Now &#8594;</a>
+                     </div>
+                     <div class="msg-col">
+                             <h1>Health Is Wealth<br> Movement Is Medicine!</h1>
+                             <p>Our online pharmacies can save you as much as 95% on your<br> medication.
+                                 We provide you fast, safe and proper service.<br> Join us and be a
+                                 member of MediFirst family.</p>
+                             <a href="" class="btn">Explore Now &#8594;</a>
+                     </div>
+                     <div class="msg-col">
+                             <h1>We Are Going To Create Future Of Pharmacy</h1>
+                             <p>Our online pharmacies can save you as much as 95% on your<br> medication.
+                                 We provide you fast, safe and proper service.<br> Join us and be a
+                                 member of MediFirst family.</p>
+                             <a href="" class="btn">Explore Now &#8594;</a>
+                     </div>
+                     <div class="msg-col">
+                             <h1>We Are Trying To Move Into The Future Pharmacy</h1>
+                             <p>Our online pharmacies can save you as much as 95% on your<br> medication.
+                                 We provide you fast, safe and proper service.<br> Join us and be a
+                                 member of MediFirst family.</p>
+                             <a href="" class="btn">Explore Now &#8594;</a>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="controller">
+                 <div id="line1"></div>
+                 <div id="line2"></div>
+                 <div id="line3"></div>
+                 <div id="line4"></div>
+                 <div id="active"></div>
+             </div>
+
+
+             <script>
+                 var slider = document.getElementById('slider');
+                 var active = document.getElementById('active');
+                 var line1 = document.getElementById('line1');
+                 var line2 = document.getElementById('line2');
+                 var line3 = document.getElementById('line3');
+                 var line4 = document.getElementById('line4');
+
+                 line1.onclick = function()
+                 {
+                    slider.style.transform = 'translateX(0)';
+                    active.style.top = '0px';
+                 }
+                 line2.onclick = function()
+                 {
+                    slider.style.transform = 'translateX(-25%)';
+                    active.style.top = '80px';
+                 }
+                 line3.onclick = function()
+                 {
+                    slider.style.transform = 'translateX(-50%)';
+                    active.style.top = '160px';
+                 }
+                 line4.onclick = function()
+                 {
+                    slider.style.transform = 'translateX(-75%)';
+                    active.style.top = '240px';
+                 }
+             </script>
+
+             <div class="col-2 top-img">
+                 <img src="{% static "image/image1.png" %}">
+             </div>
+         </div> 
+    </div>   
+ </div>   
+ 
+<!--   -----------------Featured Categories------------>
+<!--
+    <div class="categories">
+       <div class="small-container">
+           <div class="row">
+                <div class="col-3">
+                    <img src="{% static "image/category-1.jpg" %}">
+                </div>
+                <div class="col-3">
+                    <img src="{% static "image/category-2.jpg" %}">
+                </div>
+                <div class="col-3">
+                    <img src="{% static "image/category-3.jpg" %}">
+                </div>
+        </div>
+       </div>
+    </div>
+</div>-->
+
+<div class="carousel" data-flickity='{ "groupCells": false, "autoPlay": true, "pauseAutoPlayOnHover": false,"prevNextButtons": false, "pageDots": false}'>
+  <div class="carousel-cell"><img src="{% static "image/category-1.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-2.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-3.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-4.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-5.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-6.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-7.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-8.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-9.jpg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-10.jpeg" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-11.png" %}"></div>
+  <div class="carousel-cell"><img src="{% static "image/category-12.jpg" %}"></div>
+</div>
+
+<!-------------------Featured Products------------>
+
+<div class="small-container">
+    <h2 class="title">Featured Products</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static "image/product-1.png" %}">
+            <h4>Bandage - Pack of 3</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 300.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-2.png" %}">
+            <h4>Antigen Rapid Test Kit</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 400.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-3.png" %}">
+            <h4>Testing Tubes</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 600.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-4.png" %}">
+            <h4>Invitrogen - Thermo Fisher</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 1200.00</p>
+        </div>
+    </div>
+    <h2 class="title">Latest Products</h2>
+    <div class="row">
+        <div onclick="location.href='http://127.0.0.1:8000/product-details/';" style="transition: all 1s ease;" class="col-4">
+            <img src="{% static "image/product-5.png" %}">
+            <h4>Soothing Sleep Formula</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 160.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-6.png" %}">
+            <h4>GRDRfosfo Oral</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 200.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-7.png" %}">
+            <h4>Zenith Nutrition | L-Tyrosine</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 100.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-8.png" %}">
+            <h4>Invitrogen - Buffer 10X</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 300.00</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static "image/product-9.png" %}">
+            <h4>Bhardwaj - Punarnavasava</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p><span>&#x20B9;</span>240.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-10.png" %}">
+            <h4>Metatonin with C500mg</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 240.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-11.png" %}">
+            <h4>Biotin 10,000mcg</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p><span>&#x20B9;</span> 320.00</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static "image/product-12.png" %}">
+            <h4>StillMen - Evening Oil</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <p><span>&#x20B9;</span> 80.00</p>
+        </div>
+    </div>
+</div>
+
+<!-------------------Exclusive Products-------------------------->
+
+<!--<div class="offer">
+    <div class="small-container">
+       <div class="row">
+           <div class="col-2">
+                <img src="{% static "image/exclusive.png" %}" class="offer-img">
+            </div>
+            <div class="col-2">
+                <h1>Special Offer</h1>
+                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quasi in voluptatem, accusamus minus, praesentium consequatur reiciendis vel perferendis reprehenderit nesciunt officiis hic sed placeat fugit laudant.</small>
+                <a href="" class="btn">Buy Now &#8594;</a>
+            </div>
+       </div>
+    </div>
+</div>-->
+
+
+<div class="carousel ex" data-flickity='{ "imagesLoaded": true, "pauseAutoPlayOnHover": false, "percentPosition": false, "autoPlay": true, "pageDots": false }'>
+      <div class="offer">
+        <div class="small-container">
+           <div class="row">
+               <div class="col-2">
+                    <img src="{% static "image/exclusive.png" %}" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <h1>Special Offer</h1>
+                    <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quasi in voluptatem, accusamus minus, praesentium consequatur
+                        reiciendis vel perferendis reprehenderit nesciunt officiis
+                        hic sed placeat fugit laudant.</small><br>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                </div>
+           </div>
+        </div>
+    </div>
+
+  <div class="offer">
+        <div class="small-container">
+           <div class="row">
+               <div class="col-2">
+                    <img src="{% static "image/exclusive.png" %}" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <h1>Special Offer</h1>
+                    <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quasi in voluptatem,
+                        accusamus minus, praesentium consequatur reiciendis vel perferendis reprehenderit nesciunt officiis
+                        hic sed placeat fugit laudant.</small><br>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="offer">
+        <div class="small-container">
+           <div class="row">
+               <div class="col-2">
+                    <img src="{% static "image/exclusive.png" %}" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <h1>Special Offer</h1>
+                    <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Natus quasi in voluptatem, accusamus minus, praesentium consequatur
+                        reiciendis vel perferendis reprehenderit nesciunt officiis hic sed placeat fugit laudant.</small><br>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                </div>
+           </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<!----------------------------testimonial--------------------->
+
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+               <i class="fa fa-quote-left"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aspernatur, magnam sapiente delectus hic distinctio voluptate tenetur voluptas quae, ex repellat assumenda.</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="{% static "image/user-1.png" %}">
+                <h3>Sean Parker</h3>
+            </div>
+            <div class="col-3">
+               <i class="fa fa-quote-left"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aspernatur, magnam sapiente delectus hic distinctio voluptate tenetur voluptas quae, ex repellat assumenda.</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <img src="{% static "image/user-2.png" %}">
+                <h3>Mike Smith</h3>
+            </div>
+            <div class="col-3">
+               <i class="fa fa-quote-left"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aspernatur, magnam sapiente delectus hic distinctio voluptate tenetur voluptas quae, ex repellat assumenda.</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <img src="{% static "image/user-3.png" %}">
+                <h3>Mabel Joe</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------------Brands----------------------->
+
+<!--<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="images/logo-godrej.png">
+            </div>
+            <div class="col-5">
+                <img src="images/logo-oppo.png">
+            </div>
+            <div class="col-5">
+                <img src="images/logo-coca-cola.png">
+            </div>
+            <div class="col-5">
+                <img src="images/logo-paypal.png">
+            </div>
+            <div class="col-5">
+                <img src="images/logo-philips.png">
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<!-----------------footer------------------------------>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit.</p>
+                <div class="app-logo">
+                    <img src="{% static "image/play-store.png" %}">
+                    <img src="{% static "image/app-store.png" %}">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="{% static "image/logo.png" %}" class="spaceimg">
+                <p class="space">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2020 - MediFirst | Online Medical Website</p>
+    </div>
+</div>
+
+<!--------------------js for toggle menu----------------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "220px"
+            }
+        else
+            {
+                MenuItems.style.maxHeight = "0px"
+            }
+    }
+</script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>
